@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, date
 
 from yoctositemap.utils import Changefreq
 from yoctositemap.exceptions import *
@@ -20,6 +20,8 @@ class URL():
     def get_last_mod(self):
         if self.lastmode:
             if isinstance(self.lastmode, datetime):
+                return self.lastmode.strftime('%Y-%m-%d')
+            elif isinstance(self.lastmode, date):
                 return self.lastmode.strftime('%Y-%m-%d')
             else:
                 return self.lastmode
