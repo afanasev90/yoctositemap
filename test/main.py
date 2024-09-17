@@ -1,5 +1,4 @@
 from yoctositemap.sitemap import *
-from yoctositemap.url import *
 
 if __name__ == "__main__":
     print("Starting tests...")
